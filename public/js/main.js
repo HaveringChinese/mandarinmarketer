@@ -34,3 +34,14 @@ anime({
   delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
 });
 
+
+var languageBubbles = anime.timeline ({
+  easing: 'easeInOutExpo',
+  offset: 750
+});
+
+languageBubbles
+  .add({
+    targets: '.english-bubble .mandarin-bubble',
+    scale: .5
+  });
