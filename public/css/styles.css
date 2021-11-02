@@ -7,6 +7,7 @@ body {
   position: relative;
   text-align: center;
   margin: 0 0 0 0;
+  background-color: black;
 }
 
 header {
@@ -23,7 +24,7 @@ main {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 70% 1fr;
-  grid-template-rows: 250px;
+  grid-template-rows: 20vh;
   background-color: black;
 }
 
@@ -38,6 +39,7 @@ footer {
 footer p {
   position: relative;
   top: 25%;
+  color: white;
 }
 
 .title {
@@ -190,6 +192,8 @@ footer p {
   position: absolute;
   grid-column: 2/3;
   top: 25%;
+  left: 20%;
+  right: 15%;
   color: white;
   font-size: 2.5vh;
 }
@@ -318,21 +322,22 @@ footer p {
   grid-column: 1/2;
   grid-row: 2/3;
   border: solid #ffd700 10px;
-  border-bottom: solid black 10px;
+  border-bottom: solid #ffd700 10px;
 }
 
 .bottom-right {
   grid-column: 2/3;
   grid-row: 2/3;
   border: solid black 10px;
-
+  border-bottom: solid #ffd700 10px;
 }
 
 .quote {
   position: relative;
   margin: 5% 0 5% 0;
-  border: solid black 50px;
+  border: solid #ffd700 10px;
   padding: 20px;
+  background-color: black;
 }
 
 .input {
@@ -340,6 +345,8 @@ footer p {
   line-height: 4vh;
   font-size: 3vh;
   width: 50%;
+  color: white;
+  background-color: black;
 }
 
 #quote-query {
@@ -348,6 +355,8 @@ footer p {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+  color: white;
+  background-color: black;
 }
 
 #contact button {
