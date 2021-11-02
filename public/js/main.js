@@ -1,47 +1,41 @@
-  let spinThePanda = document.getElementById("centerpiece");
+//dropdown menu
 
-  spinThePanda.addEventListener("mouseover", function() {
-    anime({
-      targets: '#centerpiece',
-      rotate: '1turn',
-      backgroundColor: '#f4f4',
-      duration: 8000,
-      loop: true
-    });  
-  });
-  
-// let ringTheBell = document.querySelector("header");
+function dropDown() {
+  document.getElementById("menu-drop-down").classList.toggle("show");
+}
 
-// ringTheBell.addEventListener("mouseover", function() {
-//    anime({
-//     targets: '.bell',
-//     rotate: [45, -45],
-//     direction: 'alternate',
-//     easing: 'easeInOutSine',
-//     duration: 2000,
-//     loop: true
-//   });
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
 
-// });
+//population api 
 
-//grid effect
-anime({
-  targets: '.staggering-grid-demo .el',
-  scale: [
-    {value: .1, easing: 'easeOutSine', duration: 500},
-    {value: 1, easing: 'easeInOutQuad', duration: 1200}
-  ],
-  delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
+const RAPIDAPI_API_URL = "https:"
+
+var axios = require("axios").default;
+
+var options = {
+  method: 'GET',
+  url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries/US',
+  headers: {
+    'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
+    'x-rapidapi-key': 'd57bbf1c07msh1637d907992c851p1916eejsn2664a1b0485e'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
 });
 
 
-var languageBubbles = anime.timeline ({
-  easing: 'easeInOutExpo',
-  offset: 750
-});
-
-languageBubbles
-  .add({
-    targets: '.english-bubble .mandarin-bubble',
-    scale: .5
-  });

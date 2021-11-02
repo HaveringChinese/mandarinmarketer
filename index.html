@@ -21,43 +21,65 @@
       <h1 class="title-text title2">arketer</h1>
     </div>
     <div class="menu">
-      <button>三</button>
+      <button onclick="dropDown()" class="dropbtn">三</button>
+      <div id="menu-drop-down" class="dropdown-content">
+        <a href="" class="menu-link">Contact</a>
+        <a href="" class="menu-link">About</a>
+        <a href="" class="menu-link" id="get-started">Get Started</a>
+      </div>
     </div>
     <h4 class="subtitle">Bringing Your Business to the World's Biggest Market</h4>
+    <hr class="dividing-line">
   </header>
+  
   <main>
-    <div class="language-bubbles">
-      <div class="english-bubble">
-        <p class="e-bubble-text">Native English Speakers</p>
-      </div>
-      <div class="mandarin-bubble">
-        <p class="m-bubble-text">Native Mandarin Speakers</p>
-      </div>
+    <div class="opener">
+      <p class="opener-text">If your products are not reaching China, then you are <em>nowhere </em>near your potential.</p>
     </div>
-    <div>
-      <img id="centerpiece" src="public/images/panda-995645.jpg">
-      <div id="thought-bubble">
-        <p>Hey buddy, you're missin out on all the action.
-          China's where it's at.
-          Mandarin Marketer will get your business there, stat!</p>
-      </div>
-      <div id="firstBubble"></div>
-      <div id="secondBubble"></div>
+    <img class="shanghai-skyline" src="/public/images/shanghai-skyline.svg">
+    <div class="graphic-1">
+      <div class="language-bars english-bar"><p class="e-bar-text">Native English Speakers</p></div>
+      <div class="language-bars mandarin-bar"><p class="m-bar-text">Native Mandarin Speakers <br> 汉语母语者</p></div>
     </div>
-    <div>
-      <p></p>
-      <form id="contact" action="/" method="POST">
-        <input type="text" name="firstName" placeholder="First Name"><br>
-        <input type="text" name="lastName" placeholder="Last Name"><br>
-        <input type="email" name="email" placeholder="Email"><br>
-        <input id="quoteQuery" type="text" name="quoteQuery"
-          placeholder="Please describe the marketing services you require."><br>
-        <button type="submit" name="contact-button">Get My Free Quote</button>
-      </form>
+    <div class="populations">
+      <div class="anglo-pop"></div>
+      <div class="sino-pop"></div>
+    </div>
+    <div class="closer">
+      <p class="closer-text">Are you ready to <strong>3x</strong> your profits?</p>
     </div>
   </main>
-  <footer>Copyright @ Mandarin Marketer 2020</footer>
+  <div class="lower">
+    <div class="top-left">
+      <img src="/public/images/shanghai_zhuwei.jpg">
+    </div>
+    <div class="top-right">
+      <img src="/public/images/fruits.jpg">
+    </div>
+    <div class="bottom-left">
+      <img src="/public/images/masks.jpg">
+    </div>
+    <div class="bottom-right">
+      <img src="/public/images/huangpu-river.jpg">
+    </div>
+  </div>
+  <div class="quote">
+    <form id="contact" action="/" method="POST">
+      <input class="input" type="text" name="firstName" placeholder="First Name"><br>
+      <input class="input" type="text" name="lastName" placeholder="Last Name"><br>
+      <input class="input" type="email" name="email" placeholder="Email"><br>
+      <textarea id="quote-query" name="text" rows="14" cols="10" wrap="soft" 
+      placeholder="Please describe the marketing services you require."></textarea>
+      <br>
+      <button type="submit" name="contact-button">Get My Free Quote</button>
+    </form>
+  </div>
+  <footer>
+    <hr class="dividing-line">
+    <p>Copyright @ Mandarin Marketer 2020</p> 
+    </footer>
   <script src="public/js/node_modules/animejs/lib/anime.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="public/js/main.js"></script>
 </body>
 
