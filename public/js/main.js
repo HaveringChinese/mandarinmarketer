@@ -19,13 +19,11 @@ window.onclick = function(event) {
 
 //population api 
 
-const RAPIDAPI_API_URL = "https:"
-
 var axios = require("axios").default;
 
 var options = {
   method: 'GET',
-  url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries/US',
+  url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries',
   headers: {
     'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
     'x-rapidapi-key': 'd57bbf1c07msh1637d907992c851p1916eejsn2664a1b0485e'
