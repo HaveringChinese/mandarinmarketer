@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mandarin Marketer</title>
+  <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/public/images/MMLogo.png">
+</head>
+<body>
+    <header>
+      <div class="title">
+        <div class="firstM">
+          <img class="bell-arch" src="public/images/bellarch.svg">
+          <img class="bell" src="public/images/goldBell.svg">
+        </div>
+        <h1 class="title-text title1">andarin</h1>
+        <h1 class="m">M</h1>
+        <h1 class="title-text title2">arketer</h1>
+      </div>
+      <div class="menu">
+        <button onclick="dropDown()" class="dropbtn">三</button>
+        <div id="menu-drop-down" class="dropdown-content">
+          <a href="#contact" class="menu-link">Contact</a>
+          <a href="/about.html" class="menu-link">About</a>
+          <a href="/index.html" class="menu-link" id="get-started">Home</a>
+        </div>
+      </div>
+      <h4 class="subtitle">Bringing Your Business to the World's Biggest Market</h4>
+      <hr class="dividing-line">
+    </header>
+    
+    <div class="quote">
+      <form id="contact" action="/" method="POST">
+        <input class="input" type="text" name="firstName" placeholder="First Name"><br>
+        <input class="input" type="text" name="lastName" placeholder="Last Name"><br>
+        <input class="input" type="email" name="email" placeholder="Email"><br>
+        <textarea id="quote-query" name="text" rows="14" cols="10" wrap="soft" 
+        placeholder="Please describe the marketing services you require."></textarea>
+        <br>
+        <button type="submit" name="contact-button">Get My Free Quote</button>
+      </form>
+    </div>
+    <footer>
+      <hr class="dividing-line">
+      <p>Copyright @ Mandarin Marketer 2020</p> 
+      </footer>
+    <script src="public/js/node_modules/animejs/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="public/js/main.js"></script>
+</body>
+</html>
