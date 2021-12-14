@@ -1,6 +1,7 @@
 html {
   height: 100%;
   width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -341,28 +342,28 @@ footer p {
 }
 
 .input {
-  text-align: center;
+  text-align: left;
   line-height: 4vh;
   font-size: 3vh;
-  width: 50%;
+  width: 40%;
   color: white;
   background-color: black;
 }
 
 #quote-query {
   font-size: 3vh;
-  width: 90%;
+  width: 40%;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
   color: white;
   background-color: black;
 }
 
 #contact button {
-  width: 50%;
+  width: 25%;
   height: 25%;
-  font-size: 2em;
+  font-size: 1.5em;
   background-color: #d30404;
   color: white;
 }
