@@ -1,3 +1,7 @@
+@use "scale";
+@use "colors";
+
+
 html {
   height: 100%;
   width: 100%;
@@ -8,7 +12,7 @@ body {
   position: relative;
   text-align: center;
   margin: 0 0 0 0;
-  background-color: black;
+  background-color: colors.$black;
 }
 
 header {
@@ -17,7 +21,7 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 0 20px;
-  background-color: #d30404;
+  background-color: colors.$red;
   width: 100%;
   margin: 0 0 0 0;
 }
@@ -27,7 +31,7 @@ main {
   position: relative;
   grid-template-columns: 1fr 70% 1fr;
   grid-template-rows: 20vh;
-  background-color: black;
+  background-color: colors.$black;
 }
 
 footer {
@@ -35,13 +39,13 @@ footer {
   bottom: 0%;
   height: 100px;
   width: 100%;
-  background-color: #d30404;
+  background-color: colors.$red;
 }
 
 footer p {
   position: relative;
   top: 25%;
-  color: white;
+  color: colors.$white;
 }
 
 .title {
@@ -85,7 +89,7 @@ footer p {
   width: 2rem;
   height: 2rem;
   height: min-content;
-  color: #ffd700;
+  color: colors.$yellow;
   align-self: baseline;
   animation: swing ease-in-out 3s;
   transform-origin: 50% 0%;
@@ -104,7 +108,7 @@ footer p {
   align-self: center;
   margin: 0;
   font-size: 3rem;
-  color: #fff;
+  color: colors.$white;
 }
 
 .title1 {
@@ -137,17 +141,17 @@ footer p {
   position: absolute;
   right: 40%;
   bottom: 35%;
-  background-color: black;
-  color: #ffd700;
+  background-color: colors.$black;
+  color: colors.$yellow;
   font-size: 3rem;
-  border-color: black;
+  border-color: colors.$black;
   cursor: pointer;
   min-width: 3rem;
 }
 
 .dropbtn :hover, :focus {
-  background-color: white;
-  color: black;
+  background-color: colors.$white;
+  color: colors.$black;
 }
 
 .dropdown-content {
@@ -156,25 +160,25 @@ footer p {
   top: 70%;
   min-width: 160px;
   display: none;
-  background-color: black;
-  border: 2px solid white;
+  background-color: colors.$black;
+  border: 2px solid colors.$white;
   line-height: 5vh;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px colors.$black;
   z-index: 1;
 }
 
 .menu-link {
   display: block;
   font-size: 3vh;
-  color: white;
+  color: colors.$white;
 }
 
 .dropdown-content a :hover {
-  color: #ffd700;
+  color: colors.$yellow;
 }
 
 #get-started {
-  color: #ffd700;
+  color: colors.$yellow;
 }
 
 .show {display:block;}
@@ -182,7 +186,7 @@ footer p {
 .dividing-line {
   grid-column: 1/4;
   width: 100%;
-  color: white;
+  color: colors.$white;
   margin: 0;
 }
 
@@ -198,7 +202,7 @@ footer p {
   top: 25%;
   left: 20%;
   right: 15%;
-  color: white;
+  color: colors.$white;
   font-size: 2.5vh;
 }
 
@@ -207,7 +211,7 @@ footer p {
   bottom: 50%;
   right: 10%;
   z-index: 2;
-  color: white;
+  color: colors.$white;
   font-size: 2rem;
 }
 
@@ -256,8 +260,8 @@ footer p {
   position: relative;
   grid-row: 3;
   z-index: 2;
-  background-color: #ffd700;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: colors.$yellow;
+  box-shadow: 0px 4px 4px colors.$black;
   animation-name: shrink;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -266,15 +270,15 @@ footer p {
 .e-bar-text {
   position: absolute;
   margin: 15% auto auto 10%;
-  color: white;
+  color: colors.$white;
   font-size: 2rem;
 }
 
 .mandarin-bar {
   grid-row: 4;
   z-index: 1;
-  background-color: white;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  background-color: colors.$white;
+  box-shadow: 0px 4px 4px colors.$black;
   animation-name: grow;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -284,7 +288,7 @@ footer p {
   z-index: 2;
   position: absolute;
   margin: 4% auto 5% 5%;
-  color: black;
+  color: colors.$black;
   font-size: 2rem;
 }
 
@@ -297,7 +301,7 @@ footer p {
 
 .closer-text {
   position: relative;
-  color: white;
+  color: colors.$white;
   font-size: 3vh;
 }
 
@@ -322,36 +326,36 @@ footer p {
 .top-left {
   grid-column: 1/2;
   grid-row: 1/2;
-  border: solid black 10px;
-  border-top: white solid 10px;
+  border: solid colors.$black 10px;
+  border-top: colors.$white solid 10px;
 }
 
 .top-right {
   grid-column: 2/3;
   grid-row: 1/2; 
-  border: solid white 10px;
+  border: solid colors.$white 10px;
 }
 
 .bottom-left {
   grid-column: 1/2;
   grid-row: 2/3;
-  border: solid white 10px;
-  border-bottom: solid white 10px;
+  border: solid colors.$white 10px;
+  border-bottom: solid colors.$white 10px;
 }
 
 .bottom-right {
   grid-column: 2/3;
   grid-row: 2/3;
-  border: solid black 10px;
-  border-bottom: solid white 10px;
+  border: solid colors.$black 10px;
+  border-bottom: solid colors.$white 10px;
 }
 
 .quote {
   position: relative;
   margin: 5% 0 5% 0;
-  border: solid white 10px;
+  border: solid colors.$white 10px;
   padding: 20px;
-  background-color: black;
+  background-color: colors.$black;
 }
 
 input:focus, textarea:focus {
@@ -363,8 +367,8 @@ input:focus, textarea:focus {
   line-height: 4vh;
   font-size: 3vh;
   width: 40%;
-  color: white;
-  background-color: black;
+  color: colors.$white;
+  background-color: colors.$black;
 }
 
 .input-bottom-line {
@@ -377,20 +381,20 @@ input:focus, textarea:focus {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: left;
-  color: white;
-  background-color: black;
+  color: colors.$white;
+  background-color: colors.$black;
 }
 
 #contact button {
   width: 25%;
   height: 25%;
   font-size: 1.5em;
-  background-color: #d30404;
-  color: white;
+  background-color: colors.$red;
+  color: colors.$white;
 }
 
 #year {
-  color: white;
+  color: colors.$white;
   font-size: 1em;
 }
 

@@ -1,7 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
@@ -77,7 +77,6 @@ footer p {
     transform: rotate(25deg);
   }
 }
-
 .bell {
   position: absolute;
   top: 49%;
@@ -104,7 +103,7 @@ footer p {
   align-self: center;
   margin: 0;
   font-size: 3rem;
-  color: #fff;
+  color: white;
 }
 
 .title1 {
@@ -159,7 +158,7 @@ footer p {
   background-color: black;
   border: 2px solid white;
   line-height: 5vh;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px black;
   z-index: 1;
 }
 
@@ -177,7 +176,9 @@ footer p {
   color: #ffd700;
 }
 
-.show {display:block;}
+.show {
+  display: block;
+}
 
 .dividing-line {
   grid-column: 1/4;
@@ -226,7 +227,6 @@ footer p {
     visibility: visible;
   }
 }
-
 @keyframes shrink {
   from {
     width: 90%;
@@ -236,7 +236,6 @@ footer p {
     visibility: visible;
   }
 }
-
 .graphic-1 {
   position: relative;
   grid-column: 1/4;
@@ -257,7 +256,7 @@ footer p {
   grid-row: 3;
   z-index: 2;
   background-color: #ffd700;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px black;
   animation-name: shrink;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -274,7 +273,7 @@ footer p {
   grid-row: 4;
   z-index: 1;
   background-color: white;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  box-shadow: 0px 4px 4px black;
   animation-name: grow;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -318,7 +317,6 @@ footer p {
   transform: scale(1.02);
 }
 
-
 .top-left {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -328,7 +326,7 @@ footer p {
 
 .top-right {
   grid-column: 2/3;
-  grid-row: 1/2; 
+  grid-row: 1/2;
   border: solid white 10px;
 }
 
@@ -394,22 +392,28 @@ input:focus, textarea:focus {
   font-size: 1em;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .title-text {
     font-size: 1.5rem;
   }
+
   .m {
     font-size: 5rem;
   }
+
   .subtitle {
     font-size: 1rem;
   }
+
   .bell {
     width: 20%;
     height: 20%;
   }
+
   .bell-arch {
     width: 80%;
     height: 80%;
   }
 }
+
+/*# sourceMappingURL=index.css.map */
