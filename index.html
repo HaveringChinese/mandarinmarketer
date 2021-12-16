@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mandarin Marketer</title>
-  <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="public/css/index.css">
   <link rel="icon" type="image/x-icon" href="public/images/MMLogo.png">
 </head>
 
@@ -34,14 +34,19 @@
   
   <main>
     <div class="opener">
-      <p class="opener-text">If your products are not reaching China, then you are <em>nowhere </em>near your potential.</p>
+      <p class="opener-text">If your products are not reaching <span class="huge">China</span>, then you are <em>nowhere </em>near your potential.</p>
     </div>
-    <p class="shanghai-label">Shanghai Skyline <br> 上海天际线</p>
-    <img alt="Shanghai Skyline" class="shanghai-skyline" src="/public/images/shanghai-skyline.svg">
+    <div class="skyline">
+      <img alt="sun" class="sun" src="">
+      <p class="shanghai-label">Shanghai Skyline <br> 上海天际线</p>
+      <img alt="Shanghai Skyline" class="shanghai-skyline" src="/public/images/shanghai-skyline.svg">
+    </div>
     <div class="graphic-1">
-      <div class="language-bars english-bar"><p class="e-bar-text">Native English Speakers</p></div>
+      <p class="e-bar-text">Native English Speakers</p>
+      <div class="language-bars english-bar"></div>
       <div class="anglo-pop"></div>
-      <div class="language-bars mandarin-bar"><p class="m-bar-text">Native Mandarin Speakers <br> 汉语母语者</p></div>
+      <p class="m-bar-text">Native Mandarin Speakers <br> 汉语母语者</p>
+      <div class="language-bars mandarin-bar"></div>
       <div class="sino-pop"></div>
     </div>
     <div class="closer">
@@ -50,26 +55,30 @@
   </main>
   <div class="lower">
     <div class="top-left">
+      <h4 class="caption">400 million vehicles, <br> 300,000km of high speed rail</h4>
       <img src="/public/images/shanghai_zhuwei.jpg">
     </div>
     <div class="top-right">
+      <h4 class="caption">200 million tons of foodstuffs</h4>
       <img src="/public/images/fruits.jpg">
     </div>
     <div class="bottom-left">
+      <h4 class="caption">17% YOY growth in disposable income</h4>
       <img src="/public/images/masks.jpg">
     </div>
     <div class="bottom-right">
+      <h4 class="caption">~60 cities of over 1 million residents</h4>
       <img src="/public/images/huangpu-river.jpg">
     </div>
   </div>
   <div class="quote">
-    <form id="contact" action="/" method="POST">
-      <input class="input" style="border: none" type="text" name="name" placeholder="Your Name"><br><hr class="input-bottom-line">
-      <input class="input" style="border: none" type="email" name="email" placeholder="Your Email"><br><hr class="input-bottom-line">
-      <textarea id="quote-query" style="border: none"name="text" rows="8" cols="8" wrap="soft" 
-      placeholder="Please describe the marketing services you require."></textarea><hr class="input-bottom-line">
+    <form class="contact" action="/" method="POST">
+      <input class="input spread" style="border: none" type="text" name="name" placeholder="Your Name"><br><hr class="input-bottom-line spread">
+      <input class="input spread" style="border: none" type="email" name="email" placeholder="Your Email"><br><hr class="input-bottom-line spread">
+      <textarea class="quote-query spread" style="border: none"name="text" rows="8" cols="8" wrap="soft" 
+      placeholder="Please describe the marketing services you require."></textarea><hr class="input-bottom-line spread">
       <br>
-      <button type="submit" name="contact-button">Get My Free Quote</button>
+      <button type="submit" class="contact-button spread" name="contact-button">Get My Free Quote</button>
     </form>
   </div>
   <footer class="footer">
