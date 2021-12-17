@@ -9,6 +9,8 @@
   "author": "N.R.R. Conrad",
   "license": "MIT",
   "dependencies": {
-    "animejs": "^3.2.1"
+    "animejs": "^3.2.1",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
   }
 }

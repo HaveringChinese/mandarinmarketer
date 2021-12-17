@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Mandarin Marketer</title>
-  <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="public/css/index.css">
   <link rel="icon" type="image/x-icon" href="/public/images/MMLogo.png">
 </head>
 <body>
@@ -37,17 +37,14 @@
         <input class="input" type="text" name="firstName" placeholder="First Name"><br>
         <input class="input" type="text" name="lastName" placeholder="Last Name"><br>
         <input class="input" type="email" name="email" placeholder="Email"><br>
-        <textarea id="quote-query" name="text" rows="14" cols="10" wrap="soft" 
+        <textarea class="quote-query" name="text" rows="14" cols="10" wrap="soft" 
         placeholder="Please describe the marketing services you require."></textarea>
         <br>
         <button type="submit" name="contact-button">Get My Free Quote</button>
       </form>
     </div>
-    <footer>
-      <hr class="dividing-line">
-      <p id="copyright"></p> 
-      </footer>
-    <script src="public/js/node_modules/animejs/lib/anime.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <%- include("partials/footer"); %>
+    <script src="/js/main.js"></script>
+    <script src="/js/ejs.js"></script>
 </body>
 </html>
