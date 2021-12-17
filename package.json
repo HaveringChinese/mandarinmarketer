@@ -1,6 +1,32 @@
 {
   "dependencies": {
+    "babel": "^6.23.0",
+    "cors": "^2.8.5",
     "ejs": "^3.1.6",
+    "es6": "^0.0.7",
+    "express": "^4.17.2",
     "jshint": "^2.13.1"
+  },
+  "name": "mandarinmarketer",
+  "version": "1.0.0",
+  "description": "demo website for China-focused marketing studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaveringChinese/mandarinmarketer.git"
+  },
+  "author": "Nathaniel Conrad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaveringChinese/mandarinmarketer/issues"
+  },
+  "homepage": "https://github.com/HaveringChinese/mandarinmarketer#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
