@@ -24,6 +24,8 @@
     <div class="menu">
       <button onclick="dropDown()" class="dropbtn">三</button>
       <div id="menu-drop-down" class="dropdown-content">
+        <a href="/projects.html" class="menu-link">Projects</a>
+        <a href="/ourprocess.html" class="menu-link">Our Process</a>
         <a href="#contact" class="menu-link">Contact</a>
         <a href="/about.html" class="menu-link">About</a>
       </div>
@@ -43,14 +45,17 @@
     </div>
     <div class="graphic-1">
       <p class="e-bar-text">Native English Speakers</p>
-      <div class="language-bars english-bar"></div>
-      <div class="anglo-pop"></div>
+      <div class="language-bars english-bar">
+        <p id="anglo-pop" class="counter"></p>
+      </div>
       <p class="m-bar-text">Native Mandarin Speakers <br> 汉语母语者</p>
-      <div class="language-bars mandarin-bar"></div>
-      <div class="sino-pop"></div>
+      <div class="language-bars mandarin-bar">
+        <p id="sino-pop" class="counter"></p>
+      </div>
     </div>
     <div class="closer">
-      <p class="closer-text">Are you ready to <strong>3x</strong> your profits?</p>
+      <p class="closer-text">It does not matter <strong>what</strong> you are selling.</p>
+      <p class="closer-text">Are you ready to <strong>dramatically increase</strong> your profits?</p>
     </div>
   </main>
   <div class="lower">
@@ -73,10 +78,15 @@
   </div>
   <div class="quote">
     <form class="contact" action="/" method="POST">
-      <input class="input spread" style="border: none" type="text" name="name" placeholder="Your Name"><br><hr class="input-bottom-line spread">
-      <input class="input spread" style="border: none" type="email" name="email" placeholder="Your Email"><br><hr class="input-bottom-line spread">
+      <input id="contact" class="input spread" style="border: none" type="text" name="name" placeholder="Your Name">
+      <br>
+      <hr class="input-bottom-line spread">
+      <input class="input spread" style="border: none" type="email" name="email" placeholder="Your Email">
+      <br>
+      <hr class="input-bottom-line spread">
       <textarea class="quote-query spread" style="border: none"name="text" rows="8" cols="8" wrap="soft" 
-      placeholder="Please describe the marketing services you require."></textarea><hr class="input-bottom-line spread">
+      placeholder="Please describe the marketing services you require."></textarea>
+      <hr class="input-bottom-line spread">
       <br>
       <button type="submit" class="contact-button spread" name="contact-button">Get My Free Quote</button>
     </form>
@@ -85,8 +95,8 @@
     <hr class="dividing-line">
     <p>Copyright @ Mandarin Marketer <span id="year"></span></p> 
     </footer>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="src/main.js"></script>
+  <script type="text/javascript" src="src/index.js"></script>
 </body>
 
 </html>

@@ -153,11 +153,12 @@ footer p {
   position: absolute;
   right: 25%;
   top: 70%;
-  min-width: 160px;
+  min-width: 200px;
   display: none;
   background-color: black;
   border: 2px solid white;
-  line-height: 5vh;
+  padding: 20px;
+  line-height: 10vh;
   box-shadow: 0px 8px 16px 0px black;
   z-index: 1;
 }
@@ -242,7 +243,7 @@ footer p {
     width: 90%;
   }
   to {
-    width: 30%;
+    width: 37%;
     visibility: visible;
   }
 }
@@ -277,6 +278,11 @@ footer p {
   position: absolute;
   left: 3%;
   z-index: 2;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.counter {
   color: black;
   font-size: 1.5rem;
 }
