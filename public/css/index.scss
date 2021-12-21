@@ -171,8 +171,6 @@ footer p {
   color: colors.$yellow;
 }
 
-.show {display:block;}
-
 .premise {
   display: grid;
   position: relative;
@@ -443,23 +441,52 @@ input:focus, textarea:focus {
 }
 
 .process {
-  height: 100vh;
+  margin: 5% 10% 5% 10%;
+  min-height: 100vh;
 }
 
 .paragraph {
-  margin: 10% 5% 10% 5%;
+  margin: 10% 0;
+  width: 100%;
 }
 
 .paragraph-title {
   color: colors.$white;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.paragraph-subtitle {
+  color: colors.$white;
+  font-size: 1.5rem;
+  margin: 2% 10%;
+}
+
+.more {
+  min-width: 12%;
+  height: 25%;
+  font-size: 1.5em;
+  border: colors.$black;
+  background-color: colors.$black;
+  color: colors.$red;
+}
+
+.below-button {
+  width: 80%;
 }
 
 .paragraph-body {
   display: none;
-  width: fit-content;
+  min-width: 25%;
   min-height: 50px;
-  background-color: grey;
+  margin: 2% 2%;
+  color: colors.$white;
+  font-size: 1rem;
+}
+
+.show {display:block;}
+
+.about-main {
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 768px){

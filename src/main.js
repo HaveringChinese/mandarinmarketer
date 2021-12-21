@@ -1,3 +1,4 @@
+//dropdown menu
 function dropDown() {
   document.getElementById("dropbtn").addEventListener('click', function() {
     document.getElementById("menu-drop-down").classList.toggle("show");  
@@ -19,15 +20,11 @@ window.onclick = function(event) {
   }
 }; 
 
-if (document.body.classList.contains("main-page")){
-  populationIncrease();
-}
-
-var angloPop = 379004765;
-var sinoPop = 918573829;
-var secs = 230;
-
+//population counter on main page only 
 function populationIncrease(){
+  var angloPop = 379004765;
+  var sinoPop = 918573829;
+  var secs = 230;
   document.getElementById("anglo-pop").innerHTML = angloPop.toLocaleString("en");
   document.getElementById("sino-pop").innerHTML = sinoPop.toLocaleString("en");
 
@@ -39,28 +36,60 @@ function populationIncrease(){
 }, secs);
 }
 
+if (document.body.classList.contains("main-page")){
+  console.log("made it to main body");
+  populationIncrease();
+}
 
 var year = new Date().getFullYear();
 document.getElementById("year").innerHTML = year;
-//dropdown menu
 
-console.log("this works!");
 
-function showMore(){
-  var hiddenThings = document.getElementsByClassName("paragraph-body");
-  for(var thing in hiddenThings){
-    thing.classList.toggle("show");
+//expand paragraphs on our process page only
+var textBlocks = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget scelerisque est, ac faucibus lacus. Pellentesque nunc dui, hendrerit in lacinia eget, convallis non enim. Nam sit amet sem tincidunt, molestie felis a, feugiat justo. Curabitur lacinia, augue a molestie dictum, mauris mi ornare massa, at lacinia urna metus eget dolor. Quisque efficitur enim et tincidunt egestas. Sed libero leo, hendrerit vitae posuere vitae, consectetur quis turpis. Phasellus ut pharetra nunc. Nunc porttitor justo quis lorem tincidunt, ac euismod lectus suscipit. Integer nulla dolor, fermentum a consectetur vel, consectetur imperdiet tortor. Etiam ac condimentum tortor.",
+  "Praesent porta arcu nec lorem euismod, sed tempus ante feugiat. Proin nec pharetra sapien. Suspendisse sagittis vestibulum molestie. Ut id rutrum nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent posuere sapien quis lacus semper, vel feugiat lacus tincidunt. Pellentesque eu lectus id erat luctus cursus. Sed pellentesque felis a ante gravida dignissim.",
+  "Nulla facilisi. Maecenas lacinia nulla non nisl condimentum fringilla. Vestibulum vehicula auctor risus quis laoreet. Curabitur laoreet diam sed orci fermentum fringilla. Ut a interdum quam. Maecenas dapibus odio vel ante condimentum interdum. Maecenas laoreet, lectus sit amet accumsan pulvinar, eros orci aliquam quam, eget congue dui lectus et magna. Donec a eros eu eros rutrum pretium sit amet id dui. Cras malesuada, velit sed porttitor molestie, nisl eros egestas dolor, laoreet iaculis quam elit nec felis. In eget tempus libero. Donec eleifend sodales sapien ut pulvinar. Curabitur rhoncus mollis quam, a tincidunt magna."
+];
+
+function showMore(index){
+  var paras = document.querySelectorAll("p");
+  paras[index].innerHTML = textBlocks[index];
+  paras[index].classList.toggle("show");
+  }
+
+function expandText(){
+  var readMore = document.querySelectorAll(".more");
+  for (let i = 0; i < readMore.length; i++){
+    var readThis = readMore[i];
+    readThis.addEventListener("click", function() {
+      console.log(readThis.className + " was clicked");
+      showMore(i);
+      if (readMore[i].innerHTML === "Read More"){
+        readMore[i].innerHTML = "Read Less";
+      } else if (readMore[i].innerHTML === "Read Less"){
+        readMore[i].innerHTML = "Read More";
+      }
+    });
   }
 }
 
-var readMore = document.getElementById("first");
-readMore.addEventListener("click", function() {
-    console.log("did we make it?");
-    console.log(readMore);
-    showMore();
-});
+if (document.body.classList.contains("our-process")){
+  console.log("made it to process body");
+  expandText();
+}
 
+//about page only
 
+const aboutText = ""
+
+function addText(){
+  document.querySelector("p").innerHTML = aboutText;
+}
+
+if (document.body.classList.contains("about-page")){
+  console.log("made it to about page");
+}
 
 // function emailSubmitted(){
 //   document.getElementById("take-email").replaceChildren()
