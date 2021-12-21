@@ -3,12 +3,12 @@
 
 
 html {
-  height: 100%;
-  width: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
+  height: 100%;
+  width: 100%;
   position: relative;
   text-align: center;
   margin: 0 0 0 0;
@@ -26,13 +26,6 @@ header {
   margin: 0 0 0 0;
 }
 
-main {
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr 70% 1fr;
-  grid-template-rows: 20vh;
-  background-color: colors.$black;
-}
 
 footer {
   position: relative;
@@ -65,7 +58,7 @@ footer p {
 
 .firstM {
   display: inline-block;
-  position: inherit;
+  position: relative;
   text-align: center;
   align-self: center;
 }
@@ -174,13 +167,47 @@ footer p {
   color: colors.$white;
 }
 
+.home {
+  color: colors.$yellow;
+}
+
 .show {display:block;}
+
+.premise {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-template-rows: 20vh;
+  background-color: colors.$black;
+}
 
 .dividing-line {
   grid-column: 1/4;
   width: 100%;
   color: colors.$white;
   margin: 0;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20% 20% 20%;
+  margin: 5% 10% 5% 10%;
+}
+
+.client-tile {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.client-tile :hover {
+  transform: scale(1.15);
+}
+
+.logo {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
 }
 
 .opener {
@@ -415,7 +442,27 @@ input:focus, textarea:focus {
   font-size: 1em;
 }
 
-@media screen and (max-width: 480px){
+.process {
+  height: 100vh;
+}
+
+.paragraph {
+  margin: 10% 5% 10% 5%;
+}
+
+.paragraph-title {
+  color: colors.$white;
+  font-size: 2rem;
+}
+
+.paragraph-body {
+  display: none;
+  width: fit-content;
+  min-height: 50px;
+  background-color: grey;
+}
+
+@media screen and (max-width: 768px){
   .title-text {
     font-size: 1.5rem;
   }
@@ -462,5 +509,15 @@ input:focus, textarea:focus {
     z-index: 2;
     color: colors.$white;
     font-size: 2vh;
+  }
+  main {
+    min-height: 70vh;
+  }
+  .clients {
+    margin: 20% 5% 5%;
+  }
+  .logo {
+    width: 95%;
+    height: 50%;
   }
 }

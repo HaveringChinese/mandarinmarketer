@@ -9,12 +9,13 @@
   <link rel="icon" type="image/x-icon" href="/public/images/MMLogo.png">
 </head>
 <body>
-
     <header>
       <div class="title">
         <div class="firstM">
-          <img class="bell-arch" src="public/images/bellarch.svg">
-          <img class="bell" src="public/images/goldBell.svg">
+          <a href="/index.html">
+            <img class="bell-arch" src="public/images/bellarch.svg" alt="M-shaped arch home button">
+          </a>
+          <img class="bell" src="public/images/goldBell.svg" alt="a bright gold swinging bell">
         </div>
         <h1 class="title-text title1">andarin</h1>
         <h1 class="m">M</h1>
@@ -23,7 +24,7 @@
       <div class="menu">
         <button id="dropbtn" class="dropbtn">三</button>
         <div id="menu-drop-down" class="dropdown-content">
-          <a href="/index.html" class="menu-link">Home</a>
+          <a href="/index.html" class="menu-link home">Home</a>
           <a href="/clients.html" class="menu-link">Clients</a>
           <a href="/about.html" class="menu-link">About</a>
         </div>
@@ -32,16 +33,28 @@
       <hr class="dividing-line">
     </header>
 
-    <main>
-
-
-
+    <main class="process">
+      <div class="paragraph">
+        <h1 class="paragraph-title">We work closely with clients to ensure their vision and goals become our own.</h1>
+        <button id="first" class="more">Read More</button>
+        <p class="paragraph-body"></p>
+      </div>
+      <div class="paragraph">
+        <h1 class="paragraph-title">We align that vision and those goals with the landscape of the Mandarin-speaking world.</h1>
+        <button class="more">Read More</button>
+        <p class="paragraph-body"></p>
+      </div>
+      <div class="paragraph">
+        <h1 class="paragraph-title">Finally, we leverage our unique understanding and deep connections to bring unmatched results.</h1>
+        <button class="more">Read More</button>
+        <p class="paragraph-body"></p>
+      </div>
     </main>
   
     <footer class="footer">
       <hr class="dividing-line">
       <p>Copyright @ Mandarin Marketer <span id="year"></span></p> 
-      </footer>
+    </footer>
     <script type="text/javascript" src="src/main.js"></script>
 </body>
 </html>
