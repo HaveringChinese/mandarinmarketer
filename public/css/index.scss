@@ -486,7 +486,16 @@ input:focus, textarea:focus {
 .show {display:block;}
 
 .about-main {
+  margin: 5% 10% 5% 10%;
   min-height: 100vh;
+}
+
+.paragraph-text {
+  min-width: 25%;
+  min-height: 50px;
+  margin: 2% 2%;
+  color: colors.$white;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 768px){

@@ -1,3 +1,7 @@
+//all pages
+var year = new Date().getFullYear();
+document.getElementById("year").innerHTML = year;
+
 //dropdown menu
 function dropDown() {
   document.getElementById("dropbtn").addEventListener('click', function() {
@@ -41,9 +45,6 @@ if (document.body.classList.contains("main-page")){
   populationIncrease();
 }
 
-var year = new Date().getFullYear();
-document.getElementById("year").innerHTML = year;
-
 
 //expand paragraphs on our process page only
 var textBlocks = [
@@ -81,14 +82,24 @@ if (document.body.classList.contains("our-process")){
 
 //about page only
 
-const aboutText = ""
+const aboutText = [
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus ut metus pretium vestibulum. Sed felis dui, congue ut neque vel, cursus dignissim mi. Curabitur nec tempor orci. Integer id massa finibus, aliquet nisi et, sagittis erat. Praesent ultricies sed augue at efficitur. Morbi molestie mi in iaculis iaculis. Nam semper sapien sit amet est dignissim pharetra. In posuere sollicitudin eleifend. Aenean ullamcorper nisi id pellentesque commodo. Etiam placerat dapibus diam hendrerit cursus. Integer lacus est, sollicitudin eu justo id, placerat finibus diam. Donec pellentesque sapien vitae leo venenatis, egestas euismod magna pellentesque. Curabitur malesuada tempus sapien quis consequat. Donec vitae tristique diam. Fusce consectetur rhoncus erat. Suspendisse feugiat, felis sit amet ultricies ornare, enim risus euismod nisl, vestibulum finibus diam dui rhoncus elit.",
+"Donec vehicula suscipit ipsum, ut facilisis nisi bibendum at. Fusce porta tempor sollicitudin. Ut fermentum sit amet elit vitae tincidunt. Morbi et vulputate metus, ut iaculis metus. Donec ac dui quis purus porttitor blandit at sed leo. Mauris id nunc condimentum, ornare risus non, vestibulum magna. Vivamus sollicitudin leo iaculis felis pharetra posuere. Nunc scelerisque, justo id porta consectetur, diam dolor cursus ligula, at fringilla quam orci sit amet ipsum. In ac tortor eu odio consequat vehicula non ac massa.",
+"Nam sit amet enim eget orci ornare lobortis. In sollicitudin venenatis est, a accumsan nulla ornare non. Vivamus pellentesque nisl lectus, et consectetur nunc elementum in. Suspendisse at elementum orci. Fusce feugiat feugiat sodales. Pellentesque lacinia suscipit vulputate. Quisque blandit lacus erat, non luctus eros laoreet vitae. Morbi ex sapien, egestas eget libero vel, efficitur pellentesque magna.",
+"Aenean hendrerit felis id massa dictum, sit amet feugiat odio convallis. Nunc et erat luctus, vehicula libero eleifend, faucibus augue. Aenean volutpat euismod scelerisque. Mauris in urna non lectus placerat efficitur. Curabitur placerat est maximus enim egestas viverra. Curabitur pulvinar diam non massa tempus luctus. Integer quam lorem, mattis sed vehicula semper, imperdiet gravida felis. Vestibulum congue dolor et sem ultricies sagittis. Praesent non dolor arcu. Aenean vel neque consectetur, eleifend ex a, bibendum arcu.",
+"Nunc luctus ultricies erat, ac suscipit tortor. Mauris urna sapien, dapibus a nulla sit amet, sodales facilisis mauris. Praesent blandit quis ante eu vulputate. Quisque hendrerit nunc id consequat viverra. Donec euismod risus quis eros consequat, eu elementum felis faucibus. Aliquam ac lacus vitae odio maximus ultrices. Vivamus sagittis vitae ante dignissim laoreet. Suspendisse augue libero, malesuada id placerat eget, ultricies in nibh. Ut id augue a mi lacinia bibendum nec at arcu. Sed enim nisi, fringilla in posuere quis, fermentum eget tortor. Quisque sed dolor risus. Nam maximus ligula a vulputate consectetur."
+];
 
 function addText(){
-  document.querySelector("p").innerHTML = aboutText;
+  var aboutParagraphs = document.querySelectorAll("p");
+  for (var index = 0; index < aboutParagraphs.length - 1; index++){
+    aboutParagraphs[index].innerHTML = aboutText[index];
+  }
 }
 
 if (document.body.classList.contains("about-page")){
   console.log("made it to about page");
+  addText();
 }
 
 // function emailSubmitted(){
