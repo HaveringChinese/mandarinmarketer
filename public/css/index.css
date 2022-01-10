@@ -131,7 +131,7 @@ footer p {
   background-color: black;
   color: #ffd700;
   font-size: 3rem;
-  border-color: black;
+  border-color: white;
   cursor: pointer;
   min-width: 3rem;
 }
@@ -265,24 +265,24 @@ footer p {
   position: relative;
   grid-column: 1/4;
   grid-row: 3;
-  width: 100%;
-  margin: 10vh 0% 0 0%;
-  height: 40vh;
-  background-color: white;
+  width: 80%;
+  margin: 10vh 5vw 5vh 5vw;
+  min-height: 40vh;
+  background-color: black;
 }
 
 .language-bars {
   position: relative;
-  margin: 10px 10px 10px 10px;
+  margin: 20px 10px 0px 10px;
   height: 25%;
 }
 
 .english-bar {
   position: absolute;
-  top: 15%;
+  top: 12%;
   z-index: 1;
   background-color: #ffd700;
-  box-shadow: 0px 4px 4px black;
+  box-shadow: 0px 4px 4px white;
   animation-name: shrink;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -290,23 +290,33 @@ footer p {
 
 .e-bar-text {
   position: absolute;
-  left: 3%;
+  left: 2%;
   z-index: 2;
-  color: black;
+  color: white;
   font-size: 1.5rem;
 }
 
 .counter {
-  color: black;
+  color: white;
   font-size: 1.5rem;
+}
+
+#anglo-pop {
+  position: absolute;
+  left: 110%;
+}
+
+#sino-pop {
+  position: absolute;
+  left: 45%;
 }
 
 .mandarin-bar {
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   z-index: 1;
   background-color: #d30404;
-  box-shadow: 0px 4px 4px black;
+  box-shadow: 0px 4px 4px white;
   animation-name: grow;
   animation-duration: 5s;
   animation-fill-mode: forwards;
@@ -315,9 +325,9 @@ footer p {
 .m-bar-text {
   z-index: 2;
   position: absolute;
-  bottom: 30%;
-  left: 3%;
-  color: black;
+  bottom: 17%;
+  left: 2%;
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -345,7 +355,6 @@ footer p {
 .lower div img {
   width: 48vw;
   height: 45vh;
-  border-radius: 15%;
 }
 
 .lower div :hover {
@@ -366,27 +375,25 @@ footer p {
 .top-right {
   grid-column: 2/3;
   grid-row: 1/2;
-  border: solid white 10px;
+  border-right: solid white 10px;
 }
 
 .bottom-left {
   grid-column: 1/2;
   grid-row: 2/3;
-  border: solid white 10px;
-  border-bottom: solid white 10px;
+  border-left: solid white 10px;
 }
 
 .bottom-right {
   grid-column: 2/3;
   grid-row: 2/3;
-  border: solid black 10px;
-  border-bottom: solid white 10px;
+  border-top: solid white 10px;
 }
 
 .quote {
   position: relative;
   margin: 5% 0 5% 0;
-  border: solid white 10px;
+  border: solid white 0px;
   padding: 20px;
   background-color: black;
 }
@@ -422,7 +429,8 @@ input:focus, textarea:focus {
   width: 12%;
   height: 25%;
   font-size: 1.5em;
-  background-color: #d30404;
+  border-color: #d30404;
+  background-color: black;
   color: white;
 }
 
