@@ -324,7 +324,7 @@ footer p {
 .m-bar-text {
   z-index: 2;
   position: absolute;
-  bottom: 25%;
+  bottom: 17%;
   left: 2%;
   color: white;
   font-size: 1.5rem;
@@ -538,6 +538,10 @@ input:focus, textarea:focus {
   .dropbtn {
     font-size: 1.75rem;
     bottom: 2%;
+  }
+
+  .m-bar-text {
+    bottom: 15%;
   }
 }
 @media only screen and (max-width: 768px) {
