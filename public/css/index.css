@@ -500,6 +500,20 @@ input:focus, textarea:focus {
   min-height: 100vh;
 }
 
+.about-header-images {
+  display: flex;
+  flex-direction: row;
+  min-height: 60vh;
+}
+.about-header-images img {
+  max-width: 20vw;
+  max-height: 20vw;
+  padding: 10px;
+  border: solid #d30404 3px;
+  border-radius: 50%;
+  margin: 0 5vw 0 0;
+}
+
 .paragraph-text {
   min-width: 25%;
   min-height: 50px;
