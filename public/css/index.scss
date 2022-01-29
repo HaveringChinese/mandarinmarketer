@@ -526,12 +526,26 @@ input:focus, textarea:focus {
     }
 }
 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .paragraph-text {
+  opacity: 0;
   min-width: 25%;
   min-height: 50px;
   margin: 2% 2%;
   color: colors.$white;
   font-size: 1rem;
+}
+
+.display-text {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 768px){

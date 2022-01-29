@@ -82,24 +82,36 @@ if (document.body.classList.contains("our-process")){
 
 //about page only
 
-const aboutText = [
-"Mandarin Marketer was born from a simple dream: to circumvent the US-China political relationship and improve Chinese-American relations by building stronger business and commerical ties. It is no surprise that tensions are at an all time high between the two world powers, and government-to-government disputes and interest jostling are far too often at odds with what is best for the two countries' respective populations.",
-"We also knew from history that regardless of the state of politics between China and the United States, commerce remained an unstoppable uniting force, creating opportunity and unparalleled incentives for greater mututal understanding and eventually cultural cross-pollination.",
-"US-China business is truly invaluable for global stability and prosperity. Unfortunately, the lion's share of US-China trade and commerce is gobbled up by the largest multinational and domestic corporations on both sides. These behemoths wield tremendous marketing resources and have historically all but entirely crowded out smaller competitors.",
-"Thankfully, the increasing versatility and democratization of the internet has provided unprecedented varieties and quantities of marketing resources and tools to any business people who have the knowhow to utilize them. This trend has made it truly possible for any business, no matter how small, to compete toe-to-toe with the megacorporations, even in the Chinese market. Unfortunately, this has created its own challenge for those marketers: how is it possible to stand out from the crowd when that crowd is growing larger and louder than ever?",
-"That's where Mandarin Marketer makes all of the difference. Mandarin Marketer focuses on smaller clients in more targeted marketspace, and leverages decades of combined experience in China, as well as its experts' unparalleled understanding of China's nearly 1.5 billion residents, all to bring absolutely exceptional market penetration and client retention. By connecting American and Chinese businesses at the lowest levels and smallest scales, we will steadily stitch together the fabrics of these two magnificent societies, ensuring a more harmonious and prosperous future for all."
-];
+var isInViewport = function (elem) {
+	var distance = elem.getBoundingClientRect();
+	return (
+		distance.top >= 0 &&
+		distance.left >= 0 &&
+		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+};
 
-function addText(){
-  var aboutParagraphs = document.querySelectorAll("p");
-  for (var index = 0; index < aboutParagraphs.length - 1; index++){
-    aboutParagraphs[index].innerHTML = aboutText[index];
-  }
+var aboutParagraphs = document.querySelectorAll("p");
+
+function display(element){
+    element.classList.add("display-text");
+    }
+
+function callbackFunc(){
+    for (let index = 0; index < aboutParagraphs.length - 1; index++){
+    if(isInViewport(aboutParagraphs[index])){
+        display(aboutParagraphs[index]);
+    }    
+    }
 }
+
 
 if (document.body.classList.contains("about-page")){
   console.log("made it to about page");
-  addText();
+    //finds where viewport is currrently
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
 }
 
 // function emailSubmitted(){
