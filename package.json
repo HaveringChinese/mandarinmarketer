@@ -3,7 +3,8 @@
     "babel": "^6.23.0",
     "es6": "^0.0.7",
     "jshint": "^2.13.1",
-    "sass": "^1.47.0"
+    "sass": "^1.47.0",
+    "scss": "^0.2.4"
   },
   "name": "mandarinmarketer",
   "version": "1.0.0",
