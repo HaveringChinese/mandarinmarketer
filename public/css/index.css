@@ -528,7 +528,9 @@ input:focus, textarea:focus {
   min-height: 50px;
   margin: 2% 2%;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  word-spacing: 5px;
+  text-align: center;
 }
 
 .display-text {
